@@ -9,3 +9,47 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Morador {
+  id          Int          @id @unique @default(autoincrement())
+  nome        String       @db.VarChar(150)
+  sobrenome   String       @db.VarChar(150)
+  email       String       @unique @db.VarChar(150)
+  bloco       String       @db.VarChar(150)
+  apartamento Int
+  interfone   Int
+  celular     BigInt
+  reservas    Reserva[]
+  reclamacoes Reclamacao[]
+}
+
+model Reserva {
+  id        Int      @id @unique @default(autoincrement())
+  data      DateTime @unique @db.Date
+  morador   Morador  @relation(fields: [moradorId], references: [id])
+  moradorId Int
+}
+
+model Reuniao {
+  id      Int      @id @unique @default(autoincrement())
+  data    DateTime @unique @db.Date
+  assunto String   @db.VarChar(150)
+}
+
+model Aviso {
+  id           Int      @id @unique @default(autoincrement())
+  assunto      String   @db.VarChar(150)
+  mensagem     String   @db.Text
+  dataPostagem DateTime @db.Timestamptz(3)
+  dataEvento   DateTime @db.Timestamptz(3)
+}
+
+model Reclamacao {
+  id           Int      @id @unique @default(autoincrement())
+  tipo         String   @db.VarChar(150)
+  assunto      String   @db.VarChar(150)
+  mensagem     String   @db.Text
+  dataPostagem DateTime @db.Timestamptz(3)
+  morador      Morador  @relation(fields: [moradorId], references: [id])
+  moradorId    Int
+}
