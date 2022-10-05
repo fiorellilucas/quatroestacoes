@@ -37,11 +37,11 @@ model Reuniao {
 }
 
 model Aviso {
-  id           Int      @id @unique @default(autoincrement())
-  assunto      String   @db.VarChar(150)
-  mensagem     String   @db.Text
-  dataPostagem DateTime @db.Timestamptz(3)
-  dataEvento   DateTime @db.Timestamptz(3)
+  id           Int       @id @unique @default(autoincrement())
+  assunto      String    @db.VarChar(150)
+  mensagem     String    @db.Text
+  dataPostagem DateTime  @default(now()) @db.Timestamptz(3)
+  dataEvento   DateTime? @db.Timestamptz(3)
 }
 
 model Reclamacao {
@@ -49,7 +49,7 @@ model Reclamacao {
   tipo         String   @db.VarChar(150)
   assunto      String   @db.VarChar(150)
   mensagem     String   @db.Text
-  dataPostagem DateTime @db.Timestamptz(3)
+  dataPostagem DateTime @default(now()) @db.Timestamptz(3)
   morador      Morador  @relation(fields: [moradorId], references: [id])
   moradorId    Int
 }

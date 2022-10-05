@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Aviso" ALTER COLUMN "dataPostagem" SET DEFAULT CURRENT_TIMESTAMP;
+
+-- AlterTable
+ALTER TABLE "Reclamacao" ALTER COLUMN "dataPostagem" SET DEFAULT CURRENT_TIMESTAMP;
