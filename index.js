@@ -76,7 +76,7 @@ app
   })
 
   .post(async (req, res) => {
-    aviso = req.body
+    let aviso = req.body
 
     if (aviso.hasOwnProperty("dataEvento")) {
       aviso["dataEvento"] = new Date(aviso["dataEvento"])
@@ -84,6 +84,22 @@ app
     
     await prisma.aviso.create({
       data: aviso
+    })
+    res.end()
+  })
+
+app
+  .route("/api/reclamacoes")
+  .get(async (req, res) => {
+    const reclamacoes = await prisma.reclamacao.findMany()
+    res.json(reclamacoes)
+  })
+
+  .post(async (req, res) => {
+    const reclamacao = req.body
+
+    await prisma.reclamacao.create({
+      data: reclamacao
     })
     res.end()
   })
