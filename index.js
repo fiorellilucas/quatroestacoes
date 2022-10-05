@@ -50,6 +50,24 @@ app
     res.end()
   })
 
+app
+  .route("/api/reunioes")
+  .get(async (req, res) => {
+    const reunioes = await prisma.reuniao.findMany()
+    res.json(reunioes)
+  })
+  
+  .post(async (req, res) => {
+    let reuniao = req.body
+    const data = new Date(reuniao["data"])
+    reuniao["data"] = data
+
+    await prisma.reuniao.create({
+      data: reuniao
+    })
+    res.end()
+  })
+
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`)
 })
