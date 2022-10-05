@@ -56,7 +56,7 @@ app
     const reunioes = await prisma.reuniao.findMany()
     res.json(reunioes)
   })
-  
+
   .post(async (req, res) => {
     let reuniao = req.body
     const data = new Date(reuniao["data"])
@@ -64,6 +64,26 @@ app
 
     await prisma.reuniao.create({
       data: reuniao
+    })
+    res.end()
+  })
+
+app
+  .route("/api/avisos")
+  .get(async (req, res) => {
+    const avisos = await prisma.aviso.findMany()
+    res.json(avisos)
+  })
+
+  .post(async (req, res) => {
+    aviso = req.body
+
+    if (aviso.hasOwnProperty("dataEvento")) {
+      aviso["dataEvento"] = new Date(aviso["dataEvento"])
+    }
+    
+    await prisma.aviso.create({
+      data: aviso
     })
     res.end()
   })
