@@ -2,10 +2,12 @@
 
 <template>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Moradores</a>
-    <a href="#">Calendário</a>
-    <a href="#">Outros</a>
+    <router-link to="/">Home</router-link>
+    <router-link to="/moradores">Moradores</router-link>
+    <router-link to="/calendario">Calendário</router-link>
+    
+    <!-- CRIAR MENU ESTILO DRAWER PARA AS OUTRAS PÁGINAS -->
+    <router-link to="#">Outros</router-link>
   </nav>
 </template>
 
