@@ -2,11 +2,13 @@ const express = require("express")
 require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT
+const cors = require('cors')
 
 const { PrismaClient } = require("@prisma/client")
 const prisma = new PrismaClient()
 
 app.use(express.json())
+app.use(cors())
 
 app.get("/api", (req, res) => {
   res.json("hello world")
