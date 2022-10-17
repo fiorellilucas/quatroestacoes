@@ -3,7 +3,7 @@ import BottomNav from "./components/BottomNav.vue"
 </script>
 
 <template>
-  <h1>Hello world Vue.js</h1>
+  <router-view></router-view>
   <BottomNav />
 </template>
 
