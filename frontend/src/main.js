@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from "vue-router"
 import App from './App.vue'
-import Home from "./components/Home.vue"
+import Home from "./views/Home.vue"
 import "./assets/main.css"
 
 const routes = [
