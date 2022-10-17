@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+  import QuadroAvisos from "../components/QuadroAvisos.vue"
+</script>
 
 <template>
-  <h1>Home</h1>
+  <QuadroAvisos />
 </template>
 
 <style></style>
