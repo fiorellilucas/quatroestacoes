@@ -20,7 +20,7 @@ nav {
   align-items: center;
   height: 8%;
   width: 100%;
-  background-color: #DFA06E;
+  background-color: #F7D08A;
 }
 
 a {
