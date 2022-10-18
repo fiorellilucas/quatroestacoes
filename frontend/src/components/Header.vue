@@ -18,7 +18,6 @@ import icone_usuario from "../assets/icone_usuario.png"
 div {
   display: flex;
   justify-content: space-between;
-  margin: 1em;
 }
 
 img {

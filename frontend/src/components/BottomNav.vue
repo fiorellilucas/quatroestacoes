@@ -27,7 +27,8 @@ a {
   flex: 1 1 0;
   text-align: center;
   text-decoration: none;
-  color: black
+  color: black;
+  font-size: 1em;
 }
 
 a:visited {
