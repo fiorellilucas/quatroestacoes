@@ -7,7 +7,7 @@
     <router-link to="/calendario">Calendário</router-link>
     
     <!-- CRIAR MENU ESTILO DRAWER PARA AS OUTRAS PÁGINAS -->
-    <router-link to="#">Outros</router-link>
+    <router-link to="/outros">Outros</router-link>
   </nav>
 </template>
 
@@ -20,6 +20,7 @@ nav {
   align-items: center;
   height: 8%;
   width: 100%;
+  background-color: #DFA06E;
 }
 
 a {
@@ -31,6 +32,10 @@ a {
 
 a:visited {
   text-decoration: none;
+}
+
+.router-link-active {
+  font-weight: bold;
 }
 
 </style>
