@@ -1,0 +1,18 @@
+.quadro {
+  padding: 1em;
+  border: 2px solid #936900;
+  background-color: #F7D08A;
+  border-radius: 1.5em;
+  box-shadow: 0 0 15px #9D9272;
+  margin-bottom: 2em;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
