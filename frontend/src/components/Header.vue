@@ -1,5 +1,5 @@
 <script setup>
-import logo from "../assets/logo_sem_texto.png"
+import logo from "../assets/logo.png"
 import icone_usuario from "../assets/icone_usuario.png"
 </script>
 
@@ -22,11 +22,10 @@ div {
 }
 
 img {
-  height: 2.5em;
+  height: 3em;
 }
 
 a {
-  width: 20%;
   display: flex;
   justify-content: center;
 }
