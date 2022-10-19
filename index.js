@@ -47,6 +47,14 @@ app
             apartamento: true
           }
         }
+      }, 
+      orderBy: {
+        data: 'asc'
+      }, 
+      where: {
+        data: {
+          gte: new Date()
+        }
       }
     })
     res.json(reservas)
