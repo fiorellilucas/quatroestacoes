@@ -2,6 +2,7 @@
 import axios from "axios"
 import { ref } from "vue"
 import "../assets/quadro.css"
+import ReservaItem from "./ReservaItem.vue"
 
 // busca todas as reservas do BD
 const reservas = ref(0)
@@ -20,9 +21,7 @@ axios
 <div class="quadro">
   <h1>SALÃO DE FESTAS</h1>
   <ul>
-    <li v-for="reserva in reservas" :key="reserva.id">
-      {{ reserva.data }}
-    </li>
+    <ReservaItem v-for="reserva in reservas" :key="reserva.id" :reserva="reserva" />
   </ul>
 </div>
 </template>
