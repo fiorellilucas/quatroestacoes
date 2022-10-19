@@ -11,7 +11,6 @@ axios
   .get("/api/avisos")
   .then((response) => {
     avisos.value = response.data
-    console.log(response.data)
   })
   .catch((error) => {
     console.log(error)

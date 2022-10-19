@@ -93,7 +93,11 @@ app
 app
   .route("/api/avisos")
   .get(async (req, res) => {
-    const avisos = await prisma.aviso.findMany()
+    const avisos = await prisma.aviso.findMany({
+      orderBy: {
+        dataPostagem: 'desc'
+      }
+    })
     res.json(avisos)
   })
 
