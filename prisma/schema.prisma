@@ -25,14 +25,14 @@ model Morador {
 
 model Reserva {
   id        Int      @id @unique @default(autoincrement())
-  data      DateTime @unique @db.Date
+  data      DateTime @unique @db.Timestamptz(3)
   morador   Morador  @relation(fields: [moradorId], references: [id])
   moradorId Int
 }
 
 model Reuniao {
   id      Int      @id @unique @default(autoincrement())
-  data    DateTime @unique @db.Date
+  data    DateTime @unique @db.Timestamptz(3)
   assunto String   @db.VarChar(150)
 }
 

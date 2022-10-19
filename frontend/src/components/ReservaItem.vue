@@ -6,10 +6,9 @@ props.reserva.data = new Date(props.reserva.data)
 
 <template>
   <li>
-    <!-- getDate() retorna um dia anterior pela falta de fuso horário na entrada do BD -->
     <!-- getMonth() retorna um mês anterior pois ela retorna os meses de 0-11 em vez de 1-12 -->
     <h3>
-      {{ reserva.data.getDate() + 1 }}/{{ reserva.data.getMonth() + 1 }}/{{
+      {{ reserva.data.getDate() }}/{{ reserva.data.getMonth() + 1 }}/{{
         reserva.data.getFullYear()
       }}
     </h3>

@@ -13,12 +13,11 @@ if (props.aviso.dataEvento !== null) {
     <h2>{{ aviso.assunto }}</h2>
     <p>{{ aviso.mensagem }}</p>
     <br />
-    <!-- getDate() retorna um dia anterior pela falta de fuso horário na entrada do BD -->
     <!-- getMonth() retorna um mês anterior pois ela retorna os meses de 0-11 em vez de 1-12 -->
     <p v-if="aviso.dataEvento !== null">
       Acontecerá em
       <strong
-        >{{ aviso.dataEvento.getDate() + 1 }}/{{
+        >{{ aviso.dataEvento.getDate() }}/{{
           aviso.dataEvento.getMonth() + 1
         }}/{{ aviso.dataEvento.getFullYear() }}</strong
       >
