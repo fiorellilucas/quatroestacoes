@@ -18,7 +18,7 @@ axios
 
 <template>
 <div id="quadro">
-  <h1>Quadro de avisos</h1>
+  <h1>QUADRO DE AVISOS</h1>
   <ul>
     <AvisoItem v-for="aviso in avisos" :key="aviso.id" :aviso="aviso" />
   </ul>
@@ -26,16 +26,17 @@ axios
 </template>
 
 <style scoped>
-#quadro{
+#quadro {
   padding: 1em;
-  border: 1px #F7D08A solid;
+  border: 2px solid #936900;
   background-color: #F7D08A;
   border-radius: 1.5em;
-  box-shadow: 0 3px 15px #D3C499, 0 -3px 15px #D3C499;
+  box-shadow: 0 0 15px #9D9272;
 }
 
 h1 {
   margin-top: 0;
+  text-align: center;
 }
 
 ul {
