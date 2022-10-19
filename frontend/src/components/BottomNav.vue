@@ -21,6 +21,7 @@ nav {
   height: 8%;
   width: 100%;
   background-color: #F7D08A;
+  box-shadow: 0 0 15px #9D9272;
 }
 
 a {
