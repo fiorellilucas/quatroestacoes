@@ -37,7 +37,18 @@ app
 app
   .route("/api/reservas")
   .get(async (req, res) => {
-    const reservas = await prisma.reserva.findMany()
+    const reservas = await prisma.reserva.findMany({
+      include: {
+        morador: {
+          select: {
+            nome: true,
+            sobrenome: true,
+            bloco: true,
+            apartamento: true
+          }
+        }
+      }
+    })
     res.json(reservas)
   })
 
