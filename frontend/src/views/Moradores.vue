@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import MoradoresLista from "../components/MoradoresLista.vue"
+</script>
 
 <template>
-  <h1>Moradores</h1>
+  <MoradoresLista />
 </template>
 
 <style scoped></style>
