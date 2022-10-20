@@ -10,7 +10,6 @@ axios
   .get("api/moradores")
   .then((response) => {
     moradores.value = response.data
-    console.log(response.data)
   })
   .catch((error) => {
     console.log(error)
@@ -18,7 +17,6 @@ axios
 </script>
 
 <template>
-  <h1>MORADORES</h1>
   <div class="quadro bloco-a">
     <h2>BLOCO A</h2>
     <ul>
