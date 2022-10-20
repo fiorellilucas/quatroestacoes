@@ -17,7 +17,16 @@ app.get("/api", (req, res) => {
 app
   .route("/api/moradores")
   .get(async (req, res) => {
-    const moradores = await prisma.morador.findMany()
+    const moradores = await prisma.morador.findMany({
+      orderBy: [
+        {
+          bloco: 'asc'
+        },
+        {
+          apartamento: 'asc'
+        }
+      ]
+    })
 
     // é necessário converter o campo 'celular' de BigInt do banco de dados para String, já que o serializer do JS não suporta BigInt.
     moradores.forEach((morador) => {
