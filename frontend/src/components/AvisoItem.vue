@@ -39,7 +39,7 @@ li {
   padding: 1em;
   border-radius: 1em;
   background-color: #fff8df;
-  box-shadow: 0 1px 15px #826c44;
+  box-shadow: 0 0 10px #826c44;
 }
 
 h2,
